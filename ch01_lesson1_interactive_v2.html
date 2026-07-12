@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第1堂｜CH01 物質的組成｜化學學測複習 V2</title>
+  <style>
+    :root{--bg:#fff9f0;--card:#ffffff;--ink:#2f2a25;--muted:#7a6f63;--line:#eadfce;--accent:#ff9f6e;--accent2:#78c6b8;--soft:#fff0dd;--shadow:0 10px 24px rgba(95,70,43,.12);--radius:22px;--ok:#58a57d;--danger:#df6b6b}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at top left,#fff0dc 0,#fff9f0 34%,#f8fbf8 100%);color:var(--ink);line-height:1.65}
+    header{position:sticky;top:0;z-index:99;backdrop-filter:blur(14px);background:rgba(255,249,240,.88);border-bottom:1px solid var(--line)} .bar{max-width:1180px;margin:auto;padding:12px 18px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .brand{font-weight:900;letter-spacing:.03em;display:flex;align-items:center;gap:8px} .badge{background:var(--ink);color:white;border-radius:999px;padding:4px 10px;font-size:.82rem} nav{display:flex;gap:8px;flex-wrap:wrap}
+    button,.btn{appearance:none;border:0;border-radius:999px;padding:9px 14px;cursor:pointer;background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(68,54,39,.09);font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:.95rem} button:hover,.btn:hover{transform:translateY(-1px)} button.active{background:var(--ink);color:white}
+    .wrap{max-width:1180px;margin:auto;padding:28px 18px 80px} .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;align-items:stretch;margin-bottom:22px} .card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    h1,h2,h3{line-height:1.25;margin:.1em 0 .55em} h1{font-size:clamp(2rem,5vw,4rem)} h2{font-size:clamp(1.55rem,3.2vw,2.35rem)} h3{font-size:1.25rem} .subtitle{color:var(--muted);font-size:1.08rem}
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px} .pill,.ref-chip{background:var(--soft);border:1px solid #ffddb7;border-radius:999px;padding:7px 12px;font-weight:900;font-size:.93rem} .ref-chip{display:inline-flex;margin:4px 4px 0 0;background:#fff4df;border-color:#f1d99c;color:#5d4932;font-size:.86rem;padding:4px 9px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px} .section{display:none} .section.active{display:block} .callout{background:#f1fbf8;border:1px solid #cdeee6;border-radius:18px;padding:14px 16px;margin:12px 0}
+    .guide-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:14px} .guide-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;min-height:160px} .fill-line{border-bottom:2px dashed #d8c9b3;min-height:34px;margin:8px 0 12px;color:#b39a7c;font-weight:900} .book-ref{background:#fff8e8;border:1px solid #f1d99c;border-radius:18px;padding:14px} .book-ref strong{display:inline-block;background:#2f2a25;color:white;border-radius:999px;padding:3px 9px;margin-bottom:7px;font-size:.88rem} .todo{background:#f1fbf8;border:1px solid #cdeee6;border-radius:18px;padding:12px 14px;margin-top:12px}
+    .screen{min-height:60vh;display:flex;flex-direction:column;justify-content:center} .screen h2{font-size:clamp(2.2rem,6vw,5rem)} .screen .subtitle{font-size:clamp(1.2rem,2.5vw,1.7rem)} .qmeta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-weight:800;margin-bottom:10px;flex-wrap:wrap} .mini{font-size:.92rem;color:var(--muted)}
+    .question{font-size:1.25rem;font-weight:900;margin:10px 0 18px} .options{display:grid;gap:10px;margin:12px 0} .option{text-align:left;border-radius:18px;padding:13px 15px;background:#fff;border:1px solid var(--line);box-shadow:none;font-weight:800;width:100%;justify-content:flex-start} .option.correct{border-color:var(--ok);background:#effaf4} .option.wrong{border-color:var(--danger);background:#fff1f1}
+    .feedback{display:none;margin-top:15px;padding:16px;border-radius:18px;border:1px solid var(--line);background:#fffaf3} .feedback.show{display:block} .explain-title{font-weight:900;margin-bottom:6px}
+    .quiz-card{display:none;min-height:440px} .quiz-card.active{display:block} .progress-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0} .progress{flex:1;min-width:180px;height:13px;background:#eadfce;border-radius:999px;overflow:hidden} .progress span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.25s}
+    .footer-note{color:var(--muted);font-size:.92rem;margin-top:20px}
+    @media (max-width:820px){.hero,.grid,.guide-grid{grid-template-columns:1fr} nav{width:100%} button,.btn{font-size:.9rem;padding:8px 10px} .card{padding:18px}}
+  </style>
+</head>
+<body>
+<header><div class="bar"><div class="brand"><span class="badge">CH01</span> 第1堂｜物質的組成</div><nav><button data-tab="overview" class="active">解題地圖</button><button data-tab="projector">學習重點</button><button data-tab="classquiz">課堂互動題</button><button data-tab="homework">課後練習</button></nav></div></header>
+<main class="wrap">
+  <section class="hero"><div class="card"><h1>第1堂｜物質的組成</h1><p class="subtitle">學生先完成解題地圖，再用課堂互動題檢核，課後用手機完成 15 題複習。</p><div class="pillrow"><span class="pill">不用印</span><span class="pill">學生自填</span><span class="pill">可投影</span><span class="pill">完整解析</span></div></div><div class="card"><h3>本堂課帶走四句話</h3><ol><li>均勻不一定是純物質。</li><li>有沒有新物質，是判斷物理／化學變化的核心。</li><li>分離方法要看利用哪一種性質差異。</li><li>相圖和加熱曲線先看軸、看區域、看平台。</li></ol></div></section>
+
+  <section id="overview" class="section active">
+    <div class="card"><h2>CH01 解題地圖｜學生自己完成版</h2><p class="subtitle">請學生打開 CH01，邊看講義邊完成下方四格。每一格旁邊都有講義頁碼與建議題號。</p><div class="callout"><strong>上課任務：</strong>完成四格後，再進入「學習重點」與「課堂互動題」。</div>
+      <div class="guide-grid">
+        <div class="guide-card"><h3>① 物質是誰？</h3><p>看到一個物質名稱，先判斷它屬於哪一類。</p><div class="fill-line">純物質 → ________ / ________</div><div class="fill-line">混合物 → ________ / ________</div><div class="todo">學生任務：在講義上圈出「均勻混合物」與「純物質」的差異。</div></div>
+        <div class="book-ref"><strong>講義定位</strong><p>CH01 p.3–6</p><p>建議看：p.3–4 物質分類、純物質與混合物比較、同位素與同素異形體。</p><p>建議做：例題1、類題1、例題2、類題2。</p><span class="ref-chip">高頻陷阱：均勻 ≠ 純物質</span><span class="ref-chip">O₂/O₃：同素異形體</span></div>
+        <div class="guide-card"><h3>② 有沒有新物質？</h3><p>判斷物理變化或化學變化時，不要只看外觀。</p><div class="fill-line">物理變化：________________________</div><div class="fill-line">化學變化：________________________</div><div class="todo">學生任務：各寫一個生活例子，並說明是否產生新物質。</div></div>
+        <div class="book-ref"><strong>講義定位</strong><p>CH01 p.4、p.6</p><p>建議看：p.4 物質的變化、物理性質與化學性質。</p><p>建議做：例題3、類題3。</p><span class="ref-chip">關鍵句：有無新物質</span><span class="ref-chip">外觀改變不一定是化學變化</span></div>
+        <div class="guide-card"><h3>③ 怎麼分離？</h3><p>分離方法不是用背的，要看利用哪一種性質差異。</p><div class="fill-line">顆粒大小 → ________</div><div class="fill-line">沸點差異 → ________ / ________</div><div class="fill-line">溶解度差異 → ________</div><div class="fill-line">附著力差異 → ________</div><div class="todo">學生任務：把「方法、原理、想收集的物質」三件事連在一起。</div></div>
+        <div class="book-ref"><strong>講義定位</strong><p>CH01 p.7–10</p><p>建議看：p.7–9 過濾、傾析、蒸發結晶、蒸餾、萃取、色層分析。</p><p>建議做：例題4、類題4、例題5、類題5。</p><span class="ref-chip">食鹽：蒸發結晶</span><span class="ref-chip">水：蒸餾</span><span class="ref-chip">咖啡因：萃取</span></div>
+        <div class="guide-card"><h3>④ 圖表怎麼看？</h3><p>相圖與加熱曲線不要急著算，先看軸與區域。</p><div class="fill-line">相圖三步：找 ________、看 ________、跨 ________</div><div class="fill-line">加熱曲線：斜線段表示 ________；平台段表示 ________</div><div class="todo">學生任務：在圖上直接標示「固、液、氣」與「熔化、汽化」。</div></div>
+        <div class="book-ref"><strong>講義定位</strong><p>CH01 p.11–16</p><p>建議看：p.12–15 相圖、臨界點、超臨界流體、相圖應用；p.13–16 加熱曲線。</p><p>建議做：例題6、類題6、例題7、類題7。</p><span class="ref-chip">相圖：先看溫度壓力</span><span class="ref-chip">平台：相變化</span></div>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:16px"><div class="card"><h2>本堂課怎麼跑</h2><ol><li>學生完成上方四格解題地圖。</li><li>老師投影「學習重點」收斂共識。</li><li>進入「課堂互動題」即時練習。</li><li>最後請學生完成「課後練習」15 題。</li></ol></div><div class="card"><h2>Classroom 用法</h2><div class="callout"><strong>作業標題：</strong>第1堂課後練習｜物質分類偵探<br><strong>作業內容：</strong>請完成互動頁面「課後練習」15 題。每題答完請看解析，錯題回講義 CH01 對應頁面。</div></div></div>
+  </section>
+
+  <section id="projector" class="section"><div class="card screen"><div class="qmeta"><span id="slideCounter">1 / 6</span><span>學習重點</span></div><h2 id="slideTitle"></h2><p class="subtitle" id="slideText"></p><div class="pillrow" id="slidePills"></div><div style="margin-top:28px"><button id="prevSlide">上一頁</button><button id="nextSlide">下一頁</button></div></div></section>
+  <section id="classquiz" class="section"><div class="card"><h2>課堂互動題</h2><p class="subtitle">適合投影，學生用手機、手勢、小白板或口頭回答。每題旁邊都有講義定位。</p><div id="classQuizContainer"></div></div></section>
+  <section id="homework" class="section"><div class="card"><h2>第1關｜物質分類偵探</h2><p class="subtitle">15 題，約 10–15 分鐘。每題答完都有完整解析與講義頁碼。進度會存在這台裝置。</p><div class="progress-wrap"><div class="progress"><span id="progressBar"></span></div><strong id="progressText">0 / 15</strong><button id="resetProgress">重置進度</button></div><div id="homeworkContainer"></div><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px"><button id="prevQ">上一題</button><button id="nextQ">下一題</button></div></div></section>
+  <p class="footer-note">頁碼與題號依「新關鍵 CH01」講義標示。正式上課前，請將本頁上傳到 GitHub Pages 或其他可公開瀏覽位置，再重新產生 QR Code。</p>
+</main>
+<script>
+const slides = [
+  {
+    "title": "學習重點 1｜先分類",
+    "text": "看到物質名稱，先問：它是純物質還是混合物？純物質再分元素／化合物；混合物再分均勻／不均勻。",
+    "pills": [
+      "CH01 p.3–6",
+      "例題1–2",
+      "類題1–2"
+    ]
+  },
+  {
+    "title": "學習重點 2｜有沒有新物質",
+    "text": "判斷物理變化或化學變化，不要只看外觀；核心問題是：有沒有產生新物質？",
+    "pills": [
+      "CH01 p.4、p.6",
+      "例題3",
+      "類題3"
+    ]
+  },
+  {
+    "title": "學習重點 3｜分離方法看原理",
+    "text": "顆粒大小→過濾；沸點→蒸發結晶／蒸餾；溶解度→萃取；附著力→層析。",
+    "pills": [
+      "CH01 p.7–10",
+      "例題4–5",
+      "類題4–5"
+    ]
+  },
+  {
+    "title": "學習重點 4｜相圖先看軸",
+    "text": "相圖先找溫度與壓力，再看所在區域；沿線移動時，看跨過哪一條相界線。",
+    "pills": [
+      "CH01 p.11–15",
+      "例題6",
+      "類題6"
+    ]
+  },
+  {
+    "title": "學習重點 5｜加熱曲線看平台",
+    "text": "斜線段：單一相、溫度上升。平台段：相變化、溫度不變。平台越長，代表相變所需熱量越多。",
+    "pills": [
+      "CH01 p.13–16",
+      "例題7",
+      "類題7"
+    ]
+  },
+  {
+    "title": "課後任務",
+    "text": "完成第1關：物質分類偵探。15 題，每題答完都要看解析，錯題回講義對應頁面。",
+    "pills": [
+      "10–15分鐘",
+      "手機完成",
+      "完整解析"
+    ]
+  }
+];
+const classQs = [
+  {
+    "type": "入口題",
+    "ref": "CH01 p.3–6｜例題1、類題1",
+    "q": "下列何者屬於均勻混合物？",
+    "options": [
+      "A. 氧氣",
+      "B. 蒸餾水",
+      "C. 黃銅",
+      "D. 泥漿",
+      "E. 葡萄糖"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "黃銅是銅與鋅形成的合金，外觀看起來均勻，但不是純物質。氧氣是元素，蒸餾水與葡萄糖是化合物，泥漿是不均勻混合物。"
+  },
+  {
+    "type": "入口題",
+    "ref": "CH01 p.7–10｜例題4、類題4",
+    "q": "若要從食鹽水中取得較純的水，最適合使用哪一種方法？",
+    "options": [
+      "A. 過濾",
+      "B. 蒸發結晶",
+      "C. 蒸餾",
+      "D. 萃取",
+      "E. 色層分析"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "想取得水，用蒸餾；想取得食鹽固體，才用蒸發結晶。過濾不能分離已溶於水中的食鹽。"
+  },
+  {
+    "type": "老師帶題",
+    "ref": "CH01 p.4、p.6｜例題3、類題3",
+    "q": "下列何者屬於化學變化？",
+    "options": [
+      "A. 乾冰昇華",
+      "B. 食鹽溶於水",
+      "C. 水蒸氣凝結",
+      "D. 鎂帶與鹽酸反應",
+      "E. 酒精蒸發"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "鎂帶與鹽酸反應會產生新物質，例如氫氣與鹽類，因此是化學變化。其他選項主要是狀態改變或溶解。"
+  },
+  {
+    "type": "學生練習",
+    "ref": "CH01 p.7–10｜例題5、類題5",
+    "q": "濾紙色層分析中，某色素移動距離最遠，最合理的推論是？",
+    "options": [
+      "A. 對濾紙附著力最大",
+      "B. 對展開液親和程度較高",
+      "C. 一定是純物質",
+      "D. 密度最大",
+      "E. 熔點最低"
+    ],
+    "ans": [
+      "B"
+    ],
+    "explain": "色層分析中，越容易隨展開液移動、對固定相附著力越小的成分，通常移動距離越遠。"
+  },
+  {
+    "type": "出口題",
+    "ref": "CH01 p.3–10｜例題1–5、類題1–5",
+    "q": "下列敘述哪些正確？甲：黃銅屬於均勻混合物。乙：食鹽水可用過濾法分離出食鹽。丙：蒸餾可收集沸點較低的液體。丁：O₂ 與 O₃ 為同位素。戊：純物質通常有固定熔點或沸點。",
+    "options": [
+      "A. 甲乙丙",
+      "B. 甲丙戊",
+      "C. 乙丁戊",
+      "D. 甲丁戊",
+      "E. 丙丁戊"
+    ],
+    "ans": [
+      "B"
+    ],
+    "explain": "甲對；乙錯，食鹽已溶於水不能過濾；丙對；丁錯，O₂ 與 O₃ 是同素異形體；戊對。"
+  }
+];
+const homeworkQs = [
+  {
+    "tag": "基礎分類",
+    "q": "下列何者屬於元素？",
+    "options": [
+      "A. 水",
+      "B. 食鹽水",
+      "C. 氧氣",
+      "D. 氯化鈉",
+      "E. 酒精水溶液"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "元素是由同一種原子組成的純物質。氧氣 O₂ 只含氧原子，所以屬於元素。水與氯化鈉是化合物；食鹽水與酒精水溶液是混合物。",
+    "mistake": "常見錯誤：以為元素一定是單一原子。其實 O₂、O₃ 都只含氧元素，仍屬元素。",
+    "ref": "CH01 p.3–6｜物質分類；建議做例題1、類題1、例題2、類題2。"
+  },
+  {
+    "tag": "基礎分類",
+    "q": "下列何者最可能具有固定熔點與固定沸點？",
+    "options": [
+      "A. 空氣",
+      "B. 海水",
+      "C. 黃銅",
+      "D. 純水",
+      "E. 牛奶"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "純物質通常具有固定熔點與沸點。純水 H₂O 是純物質；空氣、海水、黃銅、牛奶都是混合物。",
+    "mistake": "常見錯誤：黃銅看起來像單一金屬，但它是合金，屬於均勻混合物。",
+    "ref": "CH01 p.3–6｜純物質與混合物鑑別；建議做例題1、類題1、例題2、類題2。"
+  },
+  {
+    "tag": "同位素與同素異形體",
+    "q": "下列哪一組屬於同素異形體？",
+    "options": [
+      "A. ¹²C 與 ¹⁴C",
+      "B. H₂O 與 H₂O₂",
+      "C. O₂ 與 O₃",
+      "D. Na 與 Na⁺",
+      "E. HCl 與 HCl(aq)"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "同素異形體是同一元素構成，但結構或性質不同的物質。O₂ 與 O₃ 都只含氧元素，但結構不同。",
+    "mistake": "同位素看原子核；同素異形體看物質型態。",
+    "ref": "CH01 p.3–4｜同位素與同素異形體比較；建議做例題1、類題1。"
+  },
+  {
+    "tag": "物理／化學變化",
+    "q": "下列何者屬於化學變化？",
+    "options": [
+      "A. 乾冰昇華",
+      "B. 食鹽溶於水",
+      "C. 水蒸氣凝結",
+      "D. 鎂帶與鹽酸反應",
+      "E. 酒精蒸發"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "化學變化的關鍵是產生新物質。鎂帶與鹽酸反應會產生氫氣與鹽類，因此是化學變化。",
+    "mistake": "外觀改變不一定是化學變化，關鍵是有沒有新物質。",
+    "ref": "CH01 p.4、p.6｜物質的變化；建議做例題3、類題3。"
+  },
+  {
+    "tag": "分離方法",
+    "q": "欲從食鹽水中取得食鹽固體，最適合使用哪一種方法？",
+    "options": [
+      "A. 過濾",
+      "B. 蒸發結晶",
+      "C. 萃取",
+      "D. 色層分析",
+      "E. 傾析"
+    ],
+    "ans": [
+      "B"
+    ],
+    "explain": "食鹽已溶於水，無法用過濾分離。若目標是取得食鹽固體，可加熱使水蒸發，留下食鹽結晶。",
+    "mistake": "想收集水：蒸餾；想收集食鹽：蒸發結晶。",
+    "ref": "CH01 p.7–10｜混合物的分離方法；建議做例題4、類題4、例題5、類題5。"
+  },
+  {
+    "tag": "分離方法",
+    "q": "欲從藍墨水中收集較純的水，最適合的方法為何？",
+    "options": [
+      "A. 過濾",
+      "B. 傾析",
+      "C. 蒸餾",
+      "D. 萃取",
+      "E. 色層分析"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "藍墨水可視為水與色素的混合物。加熱後，沸點較低的水先汽化，再經冷凝收集，因此可用蒸餾取得水。",
+    "mistake": "過濾只能分離不溶固體與液體，不能分離已溶解的色素或鹽類。",
+    "ref": "CH01 p.8–10｜蒸餾與蒸發結晶比較；建議做例題4、類題4。"
+  },
+  {
+    "tag": "分離方法",
+    "q": "若要從茶水中分離咖啡因，加入某有機溶劑後搖晃，使咖啡因轉移到有機層中，此方法主要利用何種性質差異？",
+    "options": [
+      "A. 顆粒大小",
+      "B. 沸點",
+      "C. 密度",
+      "D. 溶解度",
+      "E. 熔點"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "萃取是利用物質在兩種不互溶溶劑中的溶解度不同，使欲分離物質轉移到較易溶的溶劑中。",
+    "mistake": "密度只決定上下層；讓咖啡因轉移的是溶解度差異。",
+    "ref": "CH01 p.8–10｜萃取；建議做例題4、類題4、例題5、類題5。"
+  },
+  {
+    "tag": "層析",
+    "q": "濾紙色層分析中，某色素移動距離最遠，最合理的推論是？",
+    "options": [
+      "A. 該色素對濾紙附著力較強",
+      "B. 該色素對展開液附著力較弱",
+      "C. 該色素對展開液溶解或親和程度較高",
+      "D. 該色素一定是純物質",
+      "E. 該色素的密度最大"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "色層分析中，若色素對固定相附著力較小，且較容易隨展開液移動，就會跑得比較遠。",
+    "mistake": "分離出一條顏色，不代表那一條一定只含一種純物質。",
+    "ref": "CH01 p.8–10｜色層分析；建議做例題5、類題5。"
+  },
+  {
+    "tag": "分類綜合",
+    "q": "下列哪一組依序為「元素、化合物、均勻混合物」？",
+    "options": [
+      "A. 氧氣、二氧化碳、空氣",
+      "B. 食鹽水、水、氧氣",
+      "C. 黃銅、氯化鈉、泥漿",
+      "D. 臭氧、空氣、葡萄糖",
+      "E. 牛奶、乙醇、水"
+    ],
+    "ans": [
+      "A"
+    ],
+    "explain": "氧氣 O₂ 是元素；二氧化碳 CO₂ 是化合物；空氣是多種氣體均勻混合，屬於均勻混合物。",
+    "mistake": "臭氧是元素，不是化合物；黃銅是合金；泥漿是不均勻混合物。",
+    "ref": "CH01 p.3–6｜物質分類；建議做例題1、類題1、例題2、類題2。"
+  },
+  {
+    "tag": "情境題",
+    "q": "冰滴咖啡製作時，冷水通過咖啡粉，咖啡中的部分成分進入水中；咖啡液再通過濾網流下。此過程主要包含哪些分離概念？",
+    "options": [
+      "A. 萃取與過濾",
+      "B. 蒸餾與過濾",
+      "C. 色層分析與蒸餾",
+      "D. 蒸發結晶與萃取",
+      "E. 傾析與色層分析"
+    ],
+    "ans": [
+      "A"
+    ],
+    "explain": "冷水使咖啡粉中的可溶成分進入水中，這是萃取；咖啡液通過濾網，使咖啡渣與液體分離，這是過濾。",
+    "mistake": "看到液體流下不等於蒸餾。蒸餾一定包含加熱汽化與冷凝。",
+    "ref": "CH01 p.9–10｜混合物分離情境應用；建議做例題5、類題5。"
+  },
+  {
+    "tag": "相變化",
+    "q": "下列哪一個相變化過程通常需要吸收能量？",
+    "options": [
+      "A. 水蒸氣凝結成水",
+      "B. 水凝固成冰",
+      "C. 乾冰昇華成二氧化碳氣體",
+      "D. 水蒸氣凝華成霜",
+      "E. 液態蠟凝固"
+    ],
+    "ans": [
+      "C"
+    ],
+    "explain": "昇華是固體直接變成氣體，粒子間距離變大，通常需要吸收能量。凝結、凝固、凝華通常放出能量。",
+    "mistake": "乾冰很冷，是因為昇華時吸收周圍熱量，不是放熱。",
+    "ref": "CH01 p.11–15｜物質狀態與相圖；建議做例題6、類題6。"
+  },
+  {
+    "tag": "加熱曲線",
+    "q": "某純物質在固定壓力下加熱，溫度隨時間上升，但在某兩段時間內溫度保持不變。下列何者最合理？",
+    "options": [
+      "A. 溫度不變時沒有吸收熱量",
+      "B. 溫度不變時正在發生相變化",
+      "C. 此物質一定是混合物",
+      "D. 第一段平台一定是沸騰",
+      "E. 第二段平台一定是熔化"
+    ],
+    "ans": [
+      "B"
+    ],
+    "explain": "純物質加熱曲線中的平台代表吸收的熱量用於改變物質狀態，而不是提高溫度。",
+    "mistake": "平台不是停止加熱，而是熱量拿去克服粒子間作用力。",
+    "ref": "CH01 p.13–16｜加熱曲線與冷卻曲線；建議做例題7、類題7。"
+  },
+  {
+    "tag": "相圖",
+    "q": "在相圖中，若某一點位於固、液、氣三相交會處，此點稱為什麼？",
+    "options": [
+      "A. 沸點",
+      "B. 熔點",
+      "C. 臨界點",
+      "D. 三相點",
+      "E. 凝固點"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "固態、液態、氣態三相可以共存的點稱為三相點。",
+    "mistake": "三相點是三態共存；臨界點是液氣界線的終點。",
+    "ref": "CH01 p.12–15｜相圖、三相點與臨界點；建議做例題6、類題6。"
+  },
+  {
+    "tag": "純物質與混合物",
+    "q": "某物質加熱時沒有明顯固定熔點，而是在一段溫度範圍內逐漸熔化。此物質最可能是？",
+    "options": [
+      "A. 純水",
+      "B. 氯化鈉",
+      "C. 氧氣",
+      "D. 混合物",
+      "E. 金剛石"
+    ],
+    "ans": [
+      "D"
+    ],
+    "explain": "純物質通常具有固定熔點；混合物因組成比例可變，常在一段溫度範圍內熔化或沸騰。",
+    "mistake": "看起來均勻不代表純物質，例如空氣、黃銅、酒精水溶液。",
+    "ref": "CH01 p.3–6｜純物質與混合物鑑別；建議做例題1、類題1、例題2、類題2。"
+  },
+  {
+    "tag": "出口整合",
+    "q": "下列敘述哪些正確？甲：蒸餾可用來收集沸點較低的液體。乙：過濾可分離食鹽水中的食鹽。丙：O₂ 與 O₃ 為同素異形體。丁：水電解產生氫氣與氧氣，屬於化學變化。戊：均勻混合物一定具有固定沸點。",
+    "options": [
+      "A. 甲乙丙",
+      "B. 甲丙丁",
+      "C. 乙丙戊",
+      "D. 甲丁戊",
+      "E. 丙丁戊"
+    ],
+    "ans": [
+      "B"
+    ],
+    "explain": "甲對；乙錯，食鹽已溶於水，不能用過濾；丙對；丁對，水電解產生新物質；戊錯，均勻混合物通常沒有固定沸點。",
+    "mistake": "均勻和純物質不同。均勻混合物各處比例相同，但仍不只一種成分。",
+    "ref": "CH01 p.3–10｜物質分類、變化、分離方法；建議回做例題1–5、類題1–5。"
+  }
+];
+function switchTab(tab){document.querySelectorAll('button[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===tab));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('button[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+let slideIndex=0;function renderSlide(){const s=slides[slideIndex];document.getElementById('slideCounter').textContent=`${slideIndex+1} / ${slides.length}`;document.getElementById('slideTitle').textContent=s.title;document.getElementById('slideText').textContent=s.text;document.getElementById('slidePills').innerHTML=s.pills.map(p=>`<span class="pill">${p}</span>`).join('')}
+document.getElementById('prevSlide').onclick=()=>{slideIndex=(slideIndex-1+slides.length)%slides.length;renderSlide()};document.getElementById('nextSlide').onclick=()=>{slideIndex=(slideIndex+1)%slides.length;renderSlide()};
+function renderClassQuiz(){const box=document.getElementById('classQuizContainer');box.innerHTML=classQs.map((q,i)=>`<div class="card" style="box-shadow:none;margin:12px 0;background:#fffdf9"><div class="qmeta"><span>${q.type}</span><span>${i+1} / ${classQs.length}</span></div><div class="mini">講義：${q.ref}</div><div class="question">${q.q}</div><div class="options">${q.options.map(o=>`<div class="option">${o}</div>`).join('')}</div><button onclick="this.nextElementSibling.classList.toggle('show')">顯示／隱藏解析</button><div class="feedback"><div class="explain-title">答案：${q.ans.join('、')}</div>${q.explain}</div></div>`).join('')}
+let hwIndex=parseInt(localStorage.getItem('ch01_hw_index_v2')||'0',10);let answered=JSON.parse(localStorage.getItem('ch01_hw_answered_v2')||'{}');function saveHW(){localStorage.setItem('ch01_hw_index_v2',String(hwIndex));localStorage.setItem('ch01_hw_answered_v2',JSON.stringify(answered))}function updateProgress(){const count=Object.keys(answered).length;document.getElementById('progressText').textContent=`${count} / ${homeworkQs.length}`;document.getElementById('progressBar').style.width=`${Math.round(count/homeworkQs.length*100)}%`}
+function renderHomework(){const box=document.getElementById('homeworkContainer');box.innerHTML=homeworkQs.map((q,i)=>{const done=answered[i];return `<div class="quiz-card ${i===hwIndex?'active':''}" data-q="${i}"><div class="qmeta"><span>${q.tag}</span><span>${i+1} / ${homeworkQs.length}</span></div><div class="mini">講義：${q.ref}</div><div class="question">${q.q}</div><div class="options">${q.options.map(o=>{const letter=o.trim()[0];let cls='';if(done){if(q.ans.includes(letter)) cls='correct'; else if(done.includes(letter)) cls='wrong'}return `<button class="option ${cls}" data-letter="${letter}" onclick="chooseHW(${i}, '${letter}', this)">${o}</button>`}).join('')}</div><div class="feedback ${done?'show':''}" id="fb-${i}"><div class="explain-title">答案：${q.ans.join('、')}</div><p>${q.explain}</p><p><strong>常見錯誤：</strong>${q.mistake}</p><p><strong>回講義：</strong>${q.ref}</p></div></div>`}).join('');updateProgress()}
+window.chooseHW=function(i,letter,btn){if(answered[i])return;answered[i]=[letter];saveHW();const card=document.querySelector(`.quiz-card[data-q="${i}"]`);const q=homeworkQs[i];card.querySelectorAll('.option').forEach(o=>{const l=o.dataset.letter;if(q.ans.includes(l))o.classList.add('correct');else if(l===letter)o.classList.add('wrong')});document.getElementById(`fb-${i}`).classList.add('show');updateProgress()}
+function goHW(delta){hwIndex=(hwIndex+delta+homeworkQs.length)%homeworkQs.length;saveHW();document.querySelectorAll('.quiz-card').forEach((c,i)=>c.classList.toggle('active',i===hwIndex));window.scrollTo({top:0,behavior:'smooth'})}document.getElementById('prevQ').onclick=()=>goHW(-1);document.getElementById('nextQ').onclick=()=>goHW(1);document.getElementById('resetProgress').onclick=()=>{if(confirm('確定要重置第1關進度嗎？')){answered={};hwIndex=0;saveHW();renderHomework()}}
+renderSlide();renderClassQuiz();renderHomework();
+</script>
+</body>
+</html>
