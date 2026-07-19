@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>第3堂｜CH06 生活中的化學</title>
+<style>
+:root{
+  --ink:#2c3030;--muted:#6f7975;--line:#dde8e1;--green:#5fa985;--green2:#eaf7ef;
+  --orange:#f3aa65;--orange2:#fff3e5;--blue:#6ea8d9;--blue2:#eaf4fc;--purple:#9a84c6;
+  --purple2:#f2eefb;--red:#d96b6b;--ok:#4f9c73;--shadow:0 12px 28px rgba(52,82,66,.12)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at top left,#eef9f1 0,#fbfdf9 45%,#fff8ef 100%);color:var(--ink);line-height:1.7}
+header{position:sticky;top:0;z-index:20;background:rgba(250,253,249,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar,.wrap{max-width:1180px;margin:auto}.bar{padding:12px 18px;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:950;letter-spacing:.02em}.badge{display:inline-block;background:var(--ink);color:white;border-radius:999px;padding:4px 10px;margin-right:7px;font-size:.82rem}nav{display:flex;gap:8px;flex-wrap:wrap}
+button{appearance:none;border:0;border-radius:999px;padding:9px 14px;background:#fff;color:var(--ink);font-weight:850;cursor:pointer;box-shadow:0 2px 9px rgba(50,72,60,.1);transition:.18s}button:hover{transform:translateY(-1px)}button.active{background:var(--ink);color:#fff}.wrap{padding:28px 18px 80px}
+.hero,.two,.guide{display:grid;grid-template-columns:1.18fr .82fr;gap:16px}.card{background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);margin-bottom:16px}h1{font-size:clamp(2.05rem,5vw,4rem);line-height:1.16;margin:.05em 0 .35em}h2{font-size:clamp(1.5rem,3.2vw,2.35rem);line-height:1.25;margin:.2em 0 .6em}h3{font-size:1.24rem;margin:.2em 0 .45em}h4{margin:.15em 0 .35em}.subtitle,.mini{color:var(--muted)}.pill{display:inline-flex;border-radius:999px;padding:6px 10px;margin:4px;background:var(--green2);border:1px solid #cce9d8;font-weight:850;font-size:.9rem}.section{display:none}.section.active{display:block}.callout{background:linear-gradient(135deg,var(--green2),#f8fcfa);border:1px solid #cae7d5;border-radius:18px;padding:14px 16px;margin:12px 0}.task{background:#fff8e9;border:1px solid #f0d7a8;border-radius:17px;padding:12px 14px;margin-top:12px}.fill{border-bottom:2px dashed #bfd3c7;min-height:35px;margin:9px 0 13px;color:#9eb0a6;font-weight:850}.ref{background:#f7fbf8;border:1px solid #d4e9db;border-radius:19px;padding:15px}.ref strong{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:3px 9px;font-size:.88rem}.ref-chip{display:inline-flex;border-radius:999px;padding:4px 9px;margin:4px 3px 0 0;background:#fff;border:1px solid var(--line);font-weight:800;font-size:.84rem;color:#52615b}
+.visual{background:#fff;border:1px solid var(--line);border-radius:19px;padding:14px;margin:12px 0;overflow:hidden}.bio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.bio-item{border-radius:16px;padding:12px 8px;text-align:center;border:1px solid var(--line);min-height:128px}.bio-item:nth-child(1){background:var(--orange2)}.bio-item:nth-child(2){background:var(--green2)}.bio-item:nth-child(3){background:var(--blue2)}.bio-item:nth-child(4){background:var(--purple2)}.bio-icon{font-size:2rem}.bio-arrow{font-size:.85rem;color:var(--muted);font-weight:800}.drug-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.drug{border:1px solid var(--line);border-radius:16px;padding:11px;background:#fff;min-height:125px}.drug .icon{font-size:1.7rem}.drug small{display:block;color:var(--muted)}
+.micelle{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}.micelle-pic{position:relative;min-height:210px;border-radius:18px;background:linear-gradient(#e7f4ff,#f8fcff);overflow:hidden;border:1px solid #cfe3ef}.oil{position:absolute;left:50%;top:50%;width:92px;height:92px;transform:translate(-50%,-50%);border-radius:50% 48% 55% 45%;background:#f2a75f;box-shadow:inset 0 -9px 18px rgba(142,78,20,.15)}.surf{position:absolute;left:50%;top:50%;width:10px;height:78px;transform-origin:50% 0}.surf::before{content:"";position:absolute;left:1px;top:-8px;width:9px;height:9px;border-radius:50%;background:#5c9ed0;border:2px solid white}.surf::after{content:"";position:absolute;left:4px;top:5px;width:3px;height:58px;border-radius:4px;background:#e4a55d}.s1{transform:rotate(0deg) translateY(-92px)}.s2{transform:rotate(45deg) translateY(-92px)}.s3{transform:rotate(90deg) translateY(-92px)}.s4{transform:rotate(135deg) translateY(-92px)}.s5{transform:rotate(180deg) translateY(-92px)}.s6{transform:rotate(225deg) translateY(-92px)}.s7{transform:rotate(270deg) translateY(-92px)}.s8{transform:rotate(315deg) translateY(-92px)}.micelle-note{display:grid;gap:10px}.note-box{border-radius:15px;padding:10px 12px;border:1px solid var(--line);background:#fff;font-weight:800}.note-box.blue{background:var(--blue2);border-color:#cfe3ef}.note-box.orange{background:var(--orange2);border-color:#f1d8b8}
+.pollution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.pollution{border-radius:16px;padding:12px;border:1px solid var(--line);background:#fff}.pollution b{display:block}.chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:6px;font-size:.9rem}.chain span{border-radius:999px;padding:4px 8px;background:#f4f7f5;border:1px solid var(--line);font-weight:800}.arrow{color:var(--green);font-weight:950}.water-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.water-step{border-radius:15px;padding:11px 8px;text-align:center;border:1px solid var(--line);background:#f7fbff}.water-step .n{display:inline-flex;width:25px;height:25px;align-items:center;justify-content:center;border-radius:50%;background:var(--blue);color:#fff;font-weight:900;margin-bottom:5px}.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tech{border-radius:17px;padding:13px;border:1px solid var(--line);background:#fff}.tech.nano{background:var(--purple2)}.tech.green{background:var(--green2)}.tech.energy{background:var(--orange2)}.energy-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.energy-tags span{border-radius:999px;padding:4px 8px;background:white;border:1px solid rgba(0,0,0,.08);font-size:.83rem;font-weight:800}
+.screen{min-height:62vh;display:flex;flex-direction:column;justify-content:center}.screen h2{font-size:clamp(2.2rem,6vw,5rem)}.screen .subtitle{font-size:clamp(1.15rem,2.4vw,1.65rem)}.qmeta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-weight:850}.question{font-size:1.24rem;font-weight:950;margin:10px 0 18px}.options{display:grid;gap:10px;margin:12px 0}.option{text-align:left;border-radius:18px;padding:13px 15px;background:#fff;border:1px solid var(--line);box-shadow:none;font-weight:820;width:100%;line-height:1.5}.option.correct{border-color:var(--ok);background:#eefaf3}.option.wrong{border-color:var(--red);background:#fff0f0}.feedback{display:none;margin-top:14px;padding:16px;border-radius:18px;border:1px solid var(--line);background:#fbfdfb}.feedback.show{display:block}.feedback .answer{font-weight:950}.progress-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0}.progress{flex:1;min-width:180px;height:13px;background:#e3ebe6;border-radius:999px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--orange));transition:.25s}.quiz-card{display:none;min-height:450px}.quiz-card.active{display:block}.result{display:none;border-radius:20px;padding:18px;margin-top:18px;background:linear-gradient(135deg,var(--green2),#fff9ef);border:1px solid #cfe5d7}.result.show{display:block}.score{font-size:2.2rem;font-weight:950}.weak-list{display:flex;gap:7px;flex-wrap:wrap}.weak-list span{border-radius:999px;padding:5px 9px;background:#fff;border:1px solid var(--line);font-weight:850}table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}th,td{border:1px solid var(--line);padding:10px;vertical-align:top}th{background:#eef8f2}
+@media(max-width:860px){.hero,.two,.guide{grid-template-columns:1fr}.bio-grid,.drug-grid{grid-template-columns:repeat(2,1fr)}.tech-grid{grid-template-columns:1fr}.water-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){nav{width:100%}button{padding:8px 10px;font-size:.89rem}.card{padding:17px}.bio-grid,.drug-grid,.pollution-grid,.micelle{grid-template-columns:1fr}.bio-item{min-height:auto}.water-flow{grid-template-columns:1fr}.micelle-pic{min-height:220px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="brand"><span class="badge">CH06</span>第3堂｜生活中的化學</div><nav><button class="active" data-tab="overview">解題地圖</button><button data-tab="projector">學習重點</button><button data-tab="classquiz">課堂互動題</button><button data-tab="homework">課後練習</button></nav></div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="card"><h1>第3堂｜生活中的化學</h1><p class="subtitle">從食物、藥物、清潔用品、環境污染到能源選擇，練習讀懂生活情境中的化學。</p><span class="pill">生物體分子</span><span class="pill">藥物</span><span class="pill">界面活性劑</span><span class="pill">環境與水處理</span><span class="pill">奈米・綠色化學・能源</span></div>
+  <div class="card"><h3>本堂課帶走五句話</h3><ol><li>生物分子先看「單體、聚合物、水解產物」。</li><li>藥物題要分清用途、副作用與適用情境。</li><li>界面活性劑靠親水端與親油端帶走油污。</li><li>污染題用「來源 → 污染物 → 影響 → 防治」判讀。</li><li>材料與能源題要同時看效能、廢棄物與環境代價。</li></ol></div>
+</section>
+
+<section id="overview" class="section active">
+<div class="card"><h2>CH06 解題地圖｜生活情境判斷版</h2><p class="subtitle">這章內容多，但核心不是背百科。學生要練的是：看見情境後，知道應該用哪一組比較表。</p><div class="callout"><b>上課任務：</b>學生依序完成五個生活任務。每一區只抓「最常混淆的比較」，再用互動題檢查。</div>
+
+<div class="guide">
+  <div class="card"><h3>① 吃進去的是什麼？</h3><div class="visual"><div class="bio-grid">
+    <div class="bio-item"><div class="bio-icon">🍚</div><b>醣類</b><div class="bio-arrow">單醣 → 雙醣／多醣</div><small>主要供能</small></div>
+    <div class="bio-item"><div class="bio-icon">🥚</div><b>蛋白質</b><div class="bio-arrow">胺基酸 → 胜肽／蛋白質</div><small>含肽鍵</small></div>
+    <div class="bio-item"><div class="bio-icon">🫒</div><b>油脂</b><div class="bio-arrow">甘油＋3脂肪酸</div><small>三酸甘油酯</small></div>
+    <div class="bio-item"><div class="bio-icon">🧬</div><b>核酸</b><div class="bio-arrow">核苷酸 → DNA／RNA</div><small>遺傳訊息</small></div>
+  </div></div>
+  <div class="fill">單醣能否再水解？________</div><div class="fill">n 個胺基酸可形成 ________ 個肽鍵</div><div class="fill">植物油不飽和脂肪酸比例通常較 ________</div><div class="fill">DNA 與 RNA 的單體皆為 ________</div>
+  <div class="task"><b>學生任務：</b>各挑一種食物，說明它主要對應哪一類分子，並寫出判斷依據。</div></div>
+  <div class="ref"><strong>講義定位</strong><p>CH06 p.175–183</p><p>看：醣類、蛋白質、油脂、核酸，以及單體／聚合物比較。</p><p>做：例題1–4、類題1–4。</p><span class="ref-chip">果糖甜度最高</span><span class="ref-chip">蛋白質需水解成胺基酸</span><span class="ref-chip">油脂不是聚合物</span><span class="ref-chip">DNA：T；RNA：U</span></div>
+</div>
+
+<div class="guide">
+  <div class="card"><h3>② 藥物是做什麼的？</h3><div class="visual"><div class="drug-grid">
+    <div class="drug"><div class="icon">💊</div><b>止痛藥</b><small>阿司匹靈、對乙醯胺酚、伊布洛芬</small></div>
+    <div class="drug"><div class="icon">🧪</div><b>制酸劑</b><small>中和胃酸；碳酸鹽可能產氣</small></div>
+    <div class="drug"><div class="icon">🦠</div><b>抗生素</b><small>治療細菌感染；濫用會產生抗藥性</small></div>
+    <div class="drug"><div class="icon">🩹</div><b>類固醇</b><small>治療非細菌感染造成的發炎</small></div>
+  </div></div>
+  <div class="fill">對乙醯胺酚主要功效：________、________</div><div class="fill">含碳酸鹽制酸劑可能造成 ________</div><div class="fill">抗生素主要用於 ________ 感染</div>
+  <div class="task"><b>學生任務：</b>看一則藥品標示，分別找出「有效成分、功效、注意事項」。</div></div>
+  <div class="ref"><strong>講義定位</strong><p>CH06 p.184–185</p><p>看：止痛劑、制酸劑、抗菌劑、類固醇。</p><p>做：例題5、類題5。</p><span class="ref-chip">阿司匹靈：可能傷胃</span><span class="ref-chip">對乙醯胺酚：留意肝功能</span><span class="ref-chip">鎂鹽易腹瀉</span><span class="ref-chip">鋁鹽易便秘</span></div>
+</div>
+
+<div class="guide">
+  <div class="card"><h3>③ 清潔劑怎麼把油帶走？</h3><div class="visual"><div class="micelle">
+    <div class="micelle-pic"><div class="oil"></div><i class="surf s1"></i><i class="surf s2"></i><i class="surf s3"></i><i class="surf s4"></i><i class="surf s5"></i><i class="surf s6"></i><i class="surf s7"></i><i class="surf s8"></i></div>
+    <div class="micelle-note"><div class="note-box blue">藍色圓頭朝向水：<b>親水端</b></div><div class="note-box orange">長碳鏈插入油污：<b>親油端</b></div><div class="note-box">搖動後形成乳狀液，油污可隨水被帶走。</div></div>
+  </div></div>
+  <div class="fill">肥皂 = 長鏈脂肪酸的 ________／________ 鹽</div><div class="fill">皂化：油脂＋強鹼 → ________＋________</div><div class="fill">硬水中的 Ca²⁺、Mg²⁺ 會使肥皂形成 ________</div>
+  <div class="task"><b>學生任務：</b>用「親水端朝哪裡、親油端朝哪裡」解釋乳化現象。</div></div>
+  <div class="ref"><strong>講義定位</strong><p>CH06 p.186–187</p><p>看：去污原理、肥皂與合成清潔劑、硬水與生物分解性。</p><p>做：例題6、類題6。</p><span class="ref-chip">肥皂水呈弱鹼</span><span class="ref-chip">合成清潔劑接近中性</span><span class="ref-chip">軟性清潔劑較易分解</span></div>
+</div>
+
+<div class="guide">
+  <div class="card"><h3>④ 污染從哪裡來？水怎麼處理？</h3><div class="visual"><div class="pollution-grid">
+    <div class="pollution"><b>酸雨</b><div class="chain"><span>SOₓ／NOₓ</span><em class="arrow">→</em><span>酸性物質</span><em class="arrow">→</em><span>建物、生態受損</span></div></div>
+    <div class="pollution"><b>PM2.5</b><div class="chain"><span>固／液微粒</span><em class="arrow">→</em><span>深入肺泡</span><em class="arrow">→</em><span>健康危害</span></div></div>
+    <div class="pollution"><b>優養化</b><div class="chain"><span>氮、磷</span><em class="arrow">→</em><span>藻類繁殖</span><em class="arrow">→</em><span>溶氧下降</span></div></div>
+    <div class="pollution"><b>溫室效應加劇</b><div class="chain"><span>溫室氣體增加</span><em class="arrow">→</em><span>紅外線逸散減少</span><em class="arrow">→</em><span>暖化</span></div></div>
+  </div><hr style="border:0;border-top:1px solid var(--line);margin:15px 0"><div class="water-flow"><div class="water-step"><div class="n">1</div><b>前處理</b><small>去除懸浮物、油脂</small></div><div class="water-step"><div class="n">2</div><b>第一級</b><small>中和、混凝、沉澱</small></div><div class="water-step"><div class="n">3</div><b>第二級</b><small>活性污泥去除需氧廢料</small></div><div class="water-step"><div class="n">4</div><b>第三級</b><small>活性碳、離子交換、逆滲透</small></div></div></div>
+  <div class="fill">酸雨主要與 ________、________ 有關</div><div class="fill">水中氮、磷增加容易造成 ________</div><div class="fill">活性碳主要利用 ________ 作用除臭</div>
+  <div class="task"><b>學生任務：</b>每一種污染都寫出「來源、影響、防治」三欄。</div></div>
+  <div class="ref"><strong>講義定位</strong><p>CH06 p.188–193</p><p>看：空氣污染、溫室效應、水污染、BOD／COD、水的淨化、純化與軟化。</p><p>做：例題7–8、類題7–8。</p><span class="ref-chip">活性碳：吸附</span><span class="ref-chip">離子交換：軟化／去離子</span><span class="ref-chip">逆滲透：半透膜</span></div>
+</div>
+
+<div class="guide">
+  <div class="card"><h3>⑤ 新材料與能源怎麼選？</h3><div class="visual"><div class="tech-grid">
+    <div class="tech nano"><h4>🔬 奈米材料</h4><p>尺寸變小後，總表面積增大，物理或化學性質可能改變。</p><div class="energy-tags"><span>奈米銀</span><span>奈米碳管</span><span>石墨烯</span><span>量子點</span></div></div>
+    <div class="tech green"><h4>🌿 綠色化學</h4><p>重點不是只看產率，而是減少危險原料、副產物與能源消耗。</p><div class="energy-tags"><span>防廢</span><span>低毒</span><span>催化</span><span>原子經濟</span></div></div>
+    <div class="tech energy"><h4>⚡ 能源</h4><p>再生不代表零影響；需同時評估穩定度、場址、成本與生態。</p><div class="energy-tags"><span>太陽能</span><span>風力</span><span>水力</span><span>地熱</span><span>生質能</span><span>海洋能</span></div></div>
+  </div></div>
+  <div class="fill">材料奈米化後，總表面積通常 ________</div><div class="fill">原子使用效率越高，代表進入目標產物的原子比例越 ________</div><div class="fill">核能屬於 ________ 再生能源</div>
+  <div class="task"><b>學生任務：</b>比較兩種製程或能源時，至少列出「效能、廢棄物、安全、環境」四項。</div></div>
+  <div class="ref"><strong>講義定位</strong><p>CH06 p.194–201</p><p>看：奈米材料、綠色化學、原子使用效率、再生與非再生能源。</p><p>做：例題9–10、類題9，以及能源題。</p><span class="ref-chip">奈米化不代表一定無毒</span><span class="ref-chip">原子經濟 ≠ 反應產率</span><span class="ref-chip">核能是非再生能源</span></div>
+</div>
+</div>
+
+<div class="two"><div class="card"><h2>本堂學習任務</h2><ol><li>完成五張生活化學判斷地圖。</li><li>能從生活情境辨認題目在考哪一類概念。</li><li>完成五題課堂互動題並閱讀解析。</li><li>課後完成概念題與計算題，依診斷結果回講義補強。</li></ol></div><div class="card"><h2>這堂不要求學生背完</h2><p>學生只要能使用五張判斷表即可：</p><ol><li>單體／聚合物／水解產物</li><li>藥物用途／副作用</li><li>親水端／親油端／硬水</li><li>污染來源／影響／防治</li><li>效能／廢棄物／安全／環境</li></ol></div></div>
+</section>
+
+<section id="projector" class="section"><div class="card screen"><div class="qmeta"><span id="slideCounter"></span><span>學習重點</span></div><h2 id="slideTitle"></h2><p class="subtitle" id="slideText"></p><div id="slidePills"></div><div style="margin-top:28px"><button id="prevSlide">上一頁</button> <button id="nextSlide">下一頁</button></div></div></section>
+
+<section id="classquiz" class="section"><div class="card"><h2>課堂互動題｜5 題</h2><p class="subtitle">每題可直接點選，作答後立即顯示解析與講義定位。</p><div class="progress-wrap"><div class="progress"><span id="classProgressBar"></span></div><strong id="classProgressText"></strong><button id="resetClassQuiz">重置課堂題</button></div><div id="classQuizContainer"></div><div><button id="prevCQ">上一題</button> <button id="nextCQ">下一題</button></div></div></section>
+
+<section id="homework" class="section"><div class="card"><h2>第3關｜生活化學觀察員</h2><p class="subtitle">共 28 題，包含概念、情境與計算題。可分段完成，每題都有完整解析、常見錯誤與講義位置。</p><div class="progress-wrap"><div class="progress"><span id="progressBar"></span></div><strong id="progressText"></strong><button id="resetProgress">重置進度</button></div><div id="homeworkContainer"></div><div><button id="prevQ">上一題</button> <button id="nextQ">下一題</button></div><div id="resultCard" class="result"><div class="score" id="scoreText"></div><p id="scoreMessage"></p><div id="weakTopics" class="weak-list"></div></div></div></section>
+<p class="mini">本頁為第3堂課用互動式頁面。頁碼與題號依《新關鍵》CH06 講義標示。</p>
+</main>
+<script>
+const slides=[
+["生物分子先找單體", "醣類看水解產物；蛋白質看胺基酸與肽鍵；油脂看甘油與脂肪酸；核酸看核苷酸。", ["p.175–183","例題1–4","單體／聚合物"]],
+["藥物題不要憑印象", "先分清止痛、制酸、抗菌、消炎，再看副作用與適用情境。", ["p.184–185","例題5","用途／副作用"]],
+["界面活性劑有兩個方向", "親油端插入油污，親水端朝向水；肥皂遇硬水會生成難溶沉澱。", ["p.186–187","例題6","親水／親油"]],
+["污染題畫因果鏈", "來源產生污染物，污染物改變環境，最後再問防治方法。", ["p.188–193","例題7–8","來源→影響→防治"]],
+["水處理方法各有任務", "活性碳吸附；離子交換去除離子或軟化；逆滲透利用半透膜。", ["p.190–193","淨化／純化／軟化"]],
+["奈米、綠色化學與能源", "材料越小表面積越大；綠色製程看原子經濟與危害；能源要評估穩定度與環境代價。", ["p.194–201","例題9–10","多面向評估"]],
+["課後任務", "完成第3關 28 題。後半加入生活化學計算題，作答後依結果回講義補強。", ["概念＋計算","完整解析","完成診斷"]]
+];
+const classQs=[
+{type:"入口題",topic:"生物體分子",ref:"CH06 p.175–183｜例題1–4",q:"澱粉完全水解後，最終主要得到哪一種物質？",options:["A. 果糖","B. 葡萄糖","C. 甘油","D. 胺基酸","E. 核苷酸"],ans:"B",explain:"澱粉是由許多葡萄糖單元形成的多醣。水解時可先形成糊精、麥芽糖，最後得到葡萄糖。"},
+{type:"判斷題",topic:"藥物",ref:"CH06 p.184–185｜例題5、類題5",q:"下列哪一項藥物用途配對最合理？",options:["A. 抗生素—治療病毒性感冒","B. 類固醇—治療所有細菌感染","C. 制酸劑—中和過多胃酸","D. 對乙醯胺酚—主要預防血栓","E. 氧化鎂—抗生素"],ans:"C",explain:"制酸劑為弱鹼性物質，可中和胃中的過量鹽酸。抗生素主要用於細菌感染；對乙醯胺酚主要止痛、解熱。"},
+{type:"圖像判讀",topic:"界面活性劑",ref:"CH06 p.186–187｜例題6、類題6",q:"界面活性劑包圍油污形成乳狀液時，哪一項敘述正確？",options:["A. 親油端朝向水","B. 親水端插入油污","C. 親油端朝向油污，親水端朝向水","D. 肥皂完全不受硬水影響","E. 清潔劑只能溶解於油"],ans:"C",explain:"界面活性劑具有親水端與親油端。親油端插入油污，親水端留在水中，使油污分散並隨水帶走。"},
+{type:"情境題",topic:"環境與水處理",ref:"CH06 p.188–193｜例題7–8、類題7–8",q:"農業肥料中的含氮、含磷物質大量進入湖泊，最可能造成哪一種現象？",options:["A. 臭氧層修復","B. 水質優養化與溶氧下降","C. 水中重金屬自動移除","D. 海水淡化","E. PM2.5 下降"],ans:"B",explain:"氮、磷是藻類養分，會造成藻類大量繁殖。藻類死亡分解時消耗氧氣，導致水中溶氧下降。"},
+{type:"出口題",topic:"材料與能源",ref:"CH06 p.194–201｜例題9–10",q:"下列敘述何者正確？甲：材料奈米化後總表面積通常增大。乙：原子使用效率高代表副產物一定多。丙：核能屬於再生能源。丁：再生能源也可能造成生態影響。",options:["A. 只有甲","B. 甲乙","C. 甲丁","D. 乙丙","E. 甲丙丁"],ans:"C",explain:"甲正確；乙錯，原子使用效率高表示較多反應物原子進入目標產物；丙錯，核燃料有限，核能屬非再生能源；丁正確。"}
+];
+const homeworkQs=[
+{tag:"醣類",topic:"生物體分子",q:"下列哪一種天然醣類甜度通常最高？",options:["A. 葡萄糖","B. 果糖","C. 乳糖","D. 麥芽糖","E. 澱粉"],ans:"B",explain:"果糖是常見天然醣類中甜度最高者。澱粉屬多醣，通常沒有甜味。",mistake:"把蔗糖當成甜度最高；蔗糖甜度高，但一般低於果糖。",ref:"CH06 p.175–177｜醣類；例題1、類題1。"},
+{tag:"蛋白質",topic:"生物體分子",q:"由 6 個胺基酸形成一條直鏈胜肽，通常形成幾個肽鍵並脫去幾個水分子？",options:["A. 5、5","B. 6、6","C. 5、6","D. 6、5","E. 4、5"],ans:"A",explain:"n 個胺基酸形成直鏈胜肽時，形成 n−1 個肽鍵，也脫去 n−1 個水分子。6 個胺基酸形成 5 個肽鍵、脫去 5 個水。",mistake:"把胺基酸個數直接當成肽鍵數。",ref:"CH06 p.177–182｜蛋白質與胜肽；例題2、類題2。"},
+{tag:"油脂",topic:"生物體分子",q:"下列有關植物油的敘述，何者最合理？",options:["A. 不飽和脂肪酸比例通常較高","B. 常溫下一定為固態","C. 完全不會氧化酸敗","D. 是由許多單體聚合而成的聚合物","E. 可任意溶於水"],ans:"A",explain:"植物油通常含較高比例的不飽和脂肪酸，因此常溫多為液態，也較容易氧化酸敗。油脂是三酸甘油酯，不屬於聚合物。",mistake:"以為『植物』就一定較穩定；雙鍵較多反而較易氧化。",ref:"CH06 p.179–183｜油脂；例題3、類題3。"},
+{tag:"核酸",topic:"生物體分子",q:"DNA 與 RNA 的共同點為何？",options:["A. 都含胸腺嘧啶 T","B. 都為雙股螺旋","C. 單體皆為核苷酸","D. 五碳醣完全相同","E. 分子量一定相同"],ans:"C",explain:"DNA 與 RNA 都是由核苷酸聚合而成。DNA 含去氧核糖與 T；RNA 含核糖與 U，結構也不一定相同。",mistake:"把核酸和核苷酸混用；核苷酸是單體，核酸是聚合物。",ref:"CH06 p.179–183｜核酸；例題4、類題4。"},
+{tag:"制酸劑",topic:"藥物",q:"碳酸氫鈉可作為速效制酸劑，但可能引起胃脹氣，主要因為與胃酸反應產生什麼？",options:["A. 氧氣","B. 氫氣","C. 二氧化碳","D. 氯氣","E. 氨氣"],ans:"C",explain:"碳酸氫鹽與酸反應會生成二氧化碳，因此可能造成脹氣。",mistake:"只記得它是鹼，卻忽略碳酸氫根遇酸會產氣。",ref:"CH06 p.184–185｜制酸劑；例題5、類題5。"},
+{tag:"抗生素",topic:"藥物",q:"下列有關抗生素的敘述，何者正確？",options:["A. 可治療所有病毒感染","B. 濫用可能使細菌產生抗藥性","C. 症狀減輕即可任意停藥","D. 與止痛藥作用完全相同","E. 主要用來中和胃酸"],ans:"B",explain:"抗生素主要抑制或殺死細菌。濫用或未依指示使用，可能增加抗藥性細菌被篩選出的機會。",mistake:"把抗生素當成所有感染的萬用藥；病毒性感染通常不是其適用對象。",ref:"CH06 p.185｜抗菌劑；例題5、類題5。"},
+{tag:"界面活性劑",topic:"界面活性劑",q:"界面活性劑的長碳鏈通常具有哪一種性質？",options:["A. 親水性","B. 親油性","C. 強酸性","D. 強氧化性","E. 金屬性"],ans:"B",explain:"長碳鏈為非極性部分，通常具有親油、疏水性；帶電或極性的端基則具有親水性。",mistake:"把『長』和『親水』連在一起；真正判斷要看極性。",ref:"CH06 p.186–187｜界面活性劑；例題6、類題6。"},
+{tag:"肥皂與硬水",topic:"界面活性劑",q:"肥皂在硬水中的洗滌效果降低，主要原因為何？",options:["A. 肥皂分解成葡萄糖","B. Ca²⁺、Mg²⁺ 與肥皂形成難溶沉澱","C. 水的沸點下降","D. 肥皂變成強酸","E. 產生大量氧氣"],ans:"B",explain:"硬水含較多 Ca²⁺、Mg²⁺，會與長鏈脂肪酸根形成難溶鈣皂或鎂皂，使有效界面活性劑減少。",mistake:"以為所有清潔劑都同樣怕硬水；合成清潔劑通常受影響較小。",ref:"CH06 p.186–187｜肥皂與合成清潔劑；例題6、類題6。"},
+{tag:"清潔劑",topic:"界面活性劑",q:"軟性合成清潔劑較不易造成長期泡沫污染，主要原因為何？",options:["A. 完全不產生泡沫","B. 碳鏈為直鏈，較易被微生物分解","C. 含有大量重金屬","D. 只能在酸中使用","E. 不具有親油端"],ans:"B",explain:"軟性清潔劑的烷基多為直鏈，較容易被微生物分解，因此較不易累積造成泡沫污染。",mistake:"『軟性』不是泡沫比較少，而是較容易生物分解。",ref:"CH06 p.186–187｜軟性與硬性清潔劑；例題6、類題6。"},
+{tag:"空氣污染",topic:"環境與水處理",q:"酸雨形成與下列哪一組污染物關係最密切？",options:["A. SOₓ 與 NOₓ","B. O₂ 與 N₂","C. He 與 Ne","D. H₂ 與 CH₄","E. NaCl 與 KCl"],ans:"A",explain:"硫氧化物可形成亞硫酸或硫酸，氮氧化物可形成硝酸，兩者都會使雨水酸化。",mistake:"二氧化碳使一般雨水略呈酸性，但嚴重酸雨主要與 SOₓ、NOₓ 有關。",ref:"CH06 p.188–193｜空氣污染；例題7、類題7。"},
+{tag:"水污染",topic:"環境與水處理",q:"湖泊發生優養化後，魚類大量死亡的主要原因通常是什麼？",options:["A. 水中氮氣完全消失","B. 藻類與分解作用使溶氧下降","C. 水變成純水","D. 重力減小","E. 水溫一定降到 0℃"],ans:"B",explain:"氮、磷促進藻類繁殖；藻類死亡後被微生物分解，消耗大量氧氣，使水中生物缺氧。",mistake:"只看到藻類增加，沒連到『分解耗氧』這一步。",ref:"CH06 p.189–190｜水污染與優養化；例題7–8。"},
+{tag:"水處理",topic:"環境與水處理",q:"活性碳淨水器主要利用哪一種作用去除異味與部分有機物？",options:["A. 核分裂","B. 吸附","C. 電解","D. 蒸餾","E. 中和"],ans:"B",explain:"活性碳具有很大的表面積，可吸附氯與部分有機物，達到除臭與改善水質的效果。",mistake:"活性碳不是把所有溶解物都過濾掉，也不是完整的殺菌方法。",ref:"CH06 p.190–193｜水的處理與純化；例題8、類題8。"},
+{tag:"奈米材料",topic:"材料與能源",q:"在質量不變下，將材料奈米化後，通常會出現哪一種變化？",options:["A. 總表面積變小","B. 總表面積變大","C. 所有性質完全不變","D. 一定變成氣體","E. 一定無毒"],ans:"B",explain:"粒子尺寸變小、粒子數增加時，總表面積通常增大，因此表面效應更明顯，物理或化學性質也可能改變。",mistake:"奈米化不等於只改大小而其他性質完全不變，也不代表安全無毒。",ref:"CH06 p.194–196｜奈米材料；例題9、類題9。"},
+{tag:"綠色化學",topic:"材料與能源",q:"比較兩條製程時，哪一項最符合綠色化學的判斷？",options:["A. 只看反應速度最快","B. 只看產物顏色","C. 優先選擇副產物少、原子使用效率高且危害低的製程","D. 只要產率高就一定綠色","E. 使用越多溶劑越好"],ans:"C",explain:"綠色化學同時重視防止廢棄物、降低毒性、節能、催化與原子經濟等，不是只看單一產率。",mistake:"把原子使用效率、產率與反應速率視為同一件事。",ref:"CH06 p.196–201｜綠色化學與原子使用效率；例題10。"},
+{tag:"能源",topic:"材料與能源",q:"下列哪一項屬於非再生能源？",options:["A. 風力","B. 太陽能","C. 地熱能","D. 核能","E. 水力"],ans:"D",explain:"核能使用的核燃料蘊藏量有限，屬於非再生能源。風力、太陽能、地熱與水力屬再生能源。",mistake:"把『低碳』和『再生』混為一談；核能可低碳，但不是再生能源。",ref:"CH06 p.197–201｜能源分類與再生能源。"},
+{tag:"計算｜營養熱量",topic:"生物體分子",q:"某份餐點含醣類 20 g、蛋白質 12 g、油脂 8 g。若醣類與蛋白質每克提供 4 kcal、油脂每克提供 9 kcal，這份餐點約提供多少熱量？",options:["A. 128 kcal","B. 160 kcal","C. 184 kcal","D. 200 kcal","E. 240 kcal"],ans:"D",explain:"總熱量 = 20×4 + 12×4 + 8×9 = 80 + 48 + 72 = 200 kcal。",mistake:"油脂每克提供 9 kcal，不是和醣類、蛋白質一樣使用 4 kcal。",ref:"CH06 p.175–183｜醣類、蛋白質與油脂；搭配營養標示情境。"},
+{tag:"計算｜胜肽",topic:"生物體分子",q:"由 8 個胺基酸形成一條直鏈胜肽時，共脫去多少克水？假設形成 1 mol 該胜肽，水的莫耳質量為 18 g/mol。",options:["A. 18 g","B. 72 g","C. 108 g","D. 126 g","E. 144 g"],ans:"D",explain:"8 個胺基酸形成直鏈胜肽會形成 7 個肽鍵，因此脫去 7 mol 水。水的質量 = 7×18 = 126 g。",mistake:"8 個胺基酸不是脫去 8 個水，而是形成 n−1 個肽鍵、脫去 n−1 個水。",ref:"CH06 p.177–182｜蛋白質與胜肽；例題2、類題2。"},
+{tag:"計算｜制酸劑",topic:"藥物",q:"NaHCO₃ 與 HCl 以 1：1 莫耳比反應。若服用的制酸劑含 0.84 g NaHCO₃（莫耳質量 84 g/mol），最多可中和多少 mol HCl？",options:["A. 0.001 mol","B. 0.005 mol","C. 0.010 mol","D. 0.020 mol","E. 0.084 mol"],ans:"C",explain:"NaHCO₃ 的莫耳數 = 0.84÷84 = 0.010 mol。由 1：1 反應比，可中和 0.010 mol HCl。",mistake:"0.84 g 不是 0.84 mol；要先除以莫耳質量。",ref:"CH06 p.184–185｜制酸劑；可連結反應式與莫耳計算。"},
+{tag:"計算｜制酸劑比較",topic:"藥物",q:"CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂。若一錠含 1.00 g CaCO₃（莫耳質量 100 g/mol），最多可中和多少 mol HCl？",options:["A. 0.005 mol","B. 0.010 mol","C. 0.020 mol","D. 0.050 mol","E. 0.100 mol"],ans:"C",explain:"CaCO₃ 莫耳數 = 1.00÷100 = 0.010 mol。每 1 mol CaCO₃ 可中和 2 mol HCl，所以可中和 0.020 mol HCl。",mistake:"計算完 CaCO₃ 的莫耳數後，還要乘上反應式中的係數比 2。",ref:"CH06 p.184–185｜制酸劑；搭配化學反應計量。"},
+{tag:"計算｜清潔劑稀釋",topic:"界面活性劑",q:"將 25 mL 濃縮清潔劑加水配成 500 mL 溶液，若以體積百分濃度表示，清潔劑濃度約為多少？",options:["A. 0.5%","B. 2.5%","C. 5.0%","D. 20%","E. 50%"],ans:"C",explain:"體積百分濃度 = 25÷500×100% = 5.0%。",mistake:"分母是配製後的溶液總體積 500 mL，不是加入的水量。",ref:"CH06 p.186–187｜界面活性劑生活情境；連結濃度計算。"},
+{tag:"計算｜污染濃度",topic:"環境與水處理",q:"某水樣 4.0 L 中含有 2.0 mg 某污染物。若水溶液密度近似 1 kg/L，該污染物濃度約為多少 ppm？",options:["A. 0.25 ppm","B. 0.50 ppm","C. 2.0 ppm","D. 4.0 ppm","E. 8.0 ppm"],ans:"B",explain:"稀水溶液中 1 mg/L 約等於 1 ppm。2.0 mg÷4.0 L = 0.50 mg/L，因此約為 0.50 ppm。",mistake:"不要直接把污染物質量 2.0 mg 當作 2.0 ppm，還要除以水樣體積。",ref:"CH06 p.188–193｜水污染；連結 ppm 濃度判讀。"},
+{tag:"計算｜去除率",topic:"環境與水處理",q:"某處理程序將污染物濃度由 120 ppm 降至 18 ppm，其去除率約為多少？",options:["A. 15%","B. 18%","C. 72%","D. 82%","E. 85%"],ans:"E",explain:"去除量 = 120−18 = 102 ppm。去除率 = 102÷120×100% = 85%。",mistake:"18÷120 是剩餘比例 15%，不是去除率。",ref:"CH06 p.188–193｜水處理效能；情境計算。"},
+{tag:"計算｜原子使用效率",topic:"材料與能源",q:"某反應的反應物總莫耳質量為 100 g/mol，目標產物莫耳質量為 80 g/mol。若係數皆為 1，原子使用效率為多少？",options:["A. 20%","B. 40%","C. 60%","D. 80%","E. 100%"],ans:"D",explain:"原子使用效率 = 目標產物的式量÷所有反應物式量總和×100% = 80÷100×100% = 80%。",mistake:"原子使用效率看反應式中的理論原子去向，不是看實際產量。",ref:"CH06 p.196–201｜綠色化學與原子使用效率；例題10。"},
+{tag:"計算｜原子經濟",topic:"材料與能源",q:"CaCO₃ → CaO + CO₂。若目標產物為 CaO，已知莫耳質量 CaCO₃=100、CaO=56、CO₂=44 g/mol，原子使用效率為多少？",options:["A. 44%","B. 50%","C. 56%","D. 78%","E. 100%"],ans:"C",explain:"原子使用效率 = 目標產物 CaO 的莫耳質量÷反應物 CaCO₃ 的莫耳質量×100% = 56÷100×100% = 56%。",mistake:"不能把副產物 CO₂ 也算進目標產物；題目指定目標產物是 CaO。",ref:"CH06 p.196–201｜綠色化學與原子使用效率；例題10。"},
+{tag:"計算｜產率",topic:"材料與能源",q:"某綠色製程理論上可得到 50 g 目標產物，實際得到 40 g，百分產率為多少？",options:["A. 20%","B. 40%","C. 50%","D. 80%","E. 125%"],ans:"D",explain:"百分產率 = 實際產量÷理論產量×100% = 40÷50×100% = 80%。",mistake:"產率與原子使用效率不同；產率比較實際與理論產量。",ref:"CH06 p.196–201｜綠色化學；比較產率與原子使用效率。"},
+{tag:"計算｜能源效率",topic:"材料與能源",q:"某裝置輸入 500 kJ 能量，其中 175 kJ 轉為有效能量，能源效率為多少？",options:["A. 25%","B. 35%","C. 50%","D. 65%","E. 75%"],ans:"B",explain:"能源效率 = 有效輸出÷總輸入×100% = 175÷500×100% = 35%。",mistake:"不要用損失能量 325 kJ 除以總輸入；那算出的是能量損失比例。",ref:"CH06 p.197–201｜能源與效率；生活情境計算。"},
+{tag:"計算｜奈米表面積",topic:"材料與能源",q:"一個邊長 1 cm 的立方體表面積為 6 cm²。若切成 1000 個邊長 0.1 cm 的小立方體，所有小立方體的總表面積為多少？",options:["A. 6 cm²","B. 10 cm²","C. 12 cm²","D. 60 cm²","E. 600 cm²"],ans:"D",explain:"每個小立方體表面積 = 6×(0.1)² = 0.06 cm²。1000 個總表面積 = 1000×0.06 = 60 cm²，是原來的 10 倍。",mistake:"切割後體積總和不變，但暴露出的總表面積會增加。",ref:"CH06 p.194–196｜奈米材料與表面效應；例題9、類題9。"},
+{tag:"計算｜酸雨",topic:"環境與水處理",q:"某地雨水 pH 由 6 降至 4，氫離子濃度約變為原來的多少倍？",options:["A. 2 倍","B. 10 倍","C. 20 倍","D. 100 倍","E. 1000 倍"],ans:"D",explain:"pH 每下降 1，氫離子濃度增加 10 倍。由 pH 6 降至 pH 4 共下降 2，因此增加 10²=100 倍。",mistake:"pH 是對數尺度，不是由 6 降到 4 就只增加 2 倍。",ref:"CH06 p.188–193｜酸雨；連結 pH 對數尺度。"}
+];
+function switchTab(t){document.querySelectorAll('button[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===t));window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('button[data-tab]').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+let si=0;function renderSlide(){const s=slides[si];slideCounter.textContent=`${si+1} / ${slides.length}`;slideTitle.textContent=s[0];slideText.textContent=s[1];slidePills.innerHTML=s[2].map(x=>`<span class="pill">${x}</span>`).join('')}prevSlide.onclick=()=>{si=(si-1+slides.length)%slides.length;renderSlide()};nextSlide.onclick=()=>{si=(si+1)%slides.length;renderSlide()};
+const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};let cqi=+(store.get('ch06_cq_i','0')),cqa=JSON.parse(store.get('ch06_cq_a','{}'));function saveCQ(){store.set('ch06_cq_i',String(cqi));store.set('ch06_cq_a',JSON.stringify(cqa))}function renderCQ(){classQuizContainer.innerHTML=classQs.map((q,i)=>{const done=cqa[i];return `<div class="quiz-card ${i===cqi?'active':''}"><div class="qmeta"><span>${q.type}｜${q.topic}</span><span>${i+1} / ${classQs.length}</span></div><div class="mini">講義：${q.ref}</div><div class="question">${q.q}</div><div class="options">${q.options.map(o=>{const L=o.trim()[0],cls=done?(L===q.ans?'correct':(done===L?'wrong':'')):'';return `<button class="option ${cls}" onclick="chooseCQ(${i},'${L}')">${o}</button>`}).join('')}</div><div class="feedback ${done?'show':''}"><div class="answer">答案：${q.ans}</div><p>${q.explain}</p></div></div>`}).join('');const n=Object.keys(cqa).length;classProgressText.textContent=`${n} / ${classQs.length}`;classProgressBar.style.width=Math.round(n/classQs.length*100)+'%'}window.chooseCQ=(i,L)=>{if(cqa[i])return;cqa[i]=L;saveCQ();renderCQ()};function goCQ(d){cqi=(cqi+d+classQs.length)%classQs.length;saveCQ();renderCQ();window.scrollTo({top:0,behavior:'smooth'})}prevCQ.onclick=()=>goCQ(-1);nextCQ.onclick=()=>goCQ(1);resetClassQuiz.onclick=()=>{if(confirm('確定要重置課堂互動題嗎？')){cqa={};cqi=0;saveCQ();renderCQ()}};
+let hwi=+(store.get('ch06_hw_i','0')),hwa=JSON.parse(store.get('ch06_hw_a','{}'));function saveHW(){store.set('ch06_hw_i',String(hwi));store.set('ch06_hw_a',JSON.stringify(hwa))}function renderHW(){homeworkContainer.innerHTML=homeworkQs.map((q,i)=>{const done=hwa[i];return `<div class="quiz-card ${i===hwi?'active':''}"><div class="qmeta"><span>${q.tag}</span><span>${i+1} / ${homeworkQs.length}</span></div><div class="question">${q.q}</div><div class="options">${q.options.map(o=>{const L=o.trim()[0],cls=done?(L===q.ans?'correct':(done===L?'wrong':'')):'';return `<button class="option ${cls}" onclick="chooseHW(${i},'${L}')">${o}</button>`}).join('')}</div><div class="feedback ${done?'show':''}"><div class="answer">答案：${q.ans}</div><p>${q.explain}</p><p><b>常見錯誤：</b>${q.mistake}</p><p><b>回講義：</b>${q.ref}</p></div></div>`}).join('');updateHW()}function updateHW(){const n=Object.keys(hwa).length;progressText.textContent=`${n} / ${homeworkQs.length}`;progressBar.style.width=Math.round(n/homeworkQs.length*100)+'%';if(n===homeworkQs.length){const correct=homeworkQs.filter((q,i)=>hwa[i]===q.ans).length;scoreText.textContent=`答對 ${correct} / ${homeworkQs.length}`;scoreMessage.textContent=correct>=24?'生活化學的概念與計算都很穩！可以回頭挑戰講義綜合題。':correct>=19?'核心概念大致掌握，建議回看下方標示的主題與錯誤計算。':'先別急著重刷，依下方主題回講義補強，再重新整理計算步驟。';const weak=[...new Set(homeworkQs.filter((q,i)=>hwa[i]!==q.ans).map(q=>q.topic))];weakTopics.innerHTML=weak.length?'<b>建議回看：</b>'+weak.map(x=>`<span>${x}</span>`).join(''):'<span>全部主題都很穩</span>';resultCard.classList.add('show')}else resultCard.classList.remove('show')}window.chooseHW=(i,L)=>{if(hwa[i])return;hwa[i]=L;saveHW();renderHW()};function goHW(d){hwi=(hwi+d+homeworkQs.length)%homeworkQs.length;saveHW();renderHW();window.scrollTo({top:0,behavior:'smooth'})}prevQ.onclick=()=>goHW(-1);nextQ.onclick=()=>goHW(1);resetProgress.onclick=()=>{if(confirm('確定要重置課後練習嗎？')){hwa={};hwi=0;saveHW();renderHW()}};
+renderSlide();renderCQ();renderHW();
+</script>
+</body></html>
